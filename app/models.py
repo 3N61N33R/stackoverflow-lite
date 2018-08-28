@@ -1,5 +1,4 @@
 from datetime import datetime
-import pdb
 
 users = []
 questions = []
@@ -38,7 +37,7 @@ class Question:
         self.timestamp = "{}".format(
             datetime.utcnow().strftime("%d-%m-%Y %H:%M"))
 
-        Question.question_id += 1
+        Question.question_id +=1
 
     def add(self):
         questions.append(self)
@@ -83,7 +82,7 @@ class Answer:
         self.timestamp = "{}".format(
             datetime.utcnow().strftime("%d-%m-%Y %H:%M"))
 
-        Answer.answer_id += 1
+        Answer.answer_id +=1
 
     def add(self):
         answers.append(self)
