@@ -40,7 +40,7 @@ class TestQuestion(unittest.TestCase):
                             content_type='application/json'
                             )
 
-        res = self.app.get('/api/v1/questions/2')
+        res = self.app.get('/api/v1/questions/4')
         self.assertEqual(res.status_code, 200)
 
     def test_update_question(self):
@@ -48,7 +48,7 @@ class TestQuestion(unittest.TestCase):
             "question": "How do I refactor tests to pass?"
         }
 
-        res = self.app.put('/api/v1/questions/2',
+        res = self.app.put('/api/v1/questions/4',
                            data=json.dumps(question),
                            content_type='application/json')
 
@@ -67,7 +67,7 @@ class TestQuestion(unittest.TestCase):
                             )
 
         """delete question"""
-        res = self.app.delete('/api/v1/questions/3')
+        res = self.app.delete('/api/v1/questions/2')
         self.assertEqual(res.status_code, 200)
 
     
